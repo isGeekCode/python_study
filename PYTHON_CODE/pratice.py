@@ -1,11 +1,14 @@
 
+total_price = 3420
+price_1000 = total_price//1000
+price_100 = (total_price-(price_1000*1000))//100
+price_10 = (total_price-(price_1000*1000)-(price_100*100))//10
 
-print(type(2))
-print(type(1.0))
-print(type(3 > 9))
-print(type("파이썬문자열"))
+print(price_1000)
+print(price_100)
+print(price_10)
 
-my_name = "제 이름은 기꼬입니다!"
-print(my_name)
-print(my_name[6:8])
-print(my_name[-6:-4])
+print("1000원 : ", price_1000)
+print("100원 : ", price_100)
+print("10원 : ", price_10)
+print("필요한 동전의 개수 : ", (price_100+price_10))
