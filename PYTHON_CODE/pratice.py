@@ -1,14 +1,9 @@
+# 변수 count를 0으로 선언
+count = 0
 
-total_price = 3420
-price_1000 = total_price//1000
-price_100 = (total_price-(price_1000*1000))//100
-price_10 = (total_price-(price_1000*1000)-(price_100*100))//10
-
-print(price_1000)
-print(price_100)
-print(price_10)
-
-print("1000원 : ", price_1000)
-print("100원 : ", price_100)
-print("10원 : ", price_10)
-print("필요한 동전의 개수 : ", (price_100+price_10))
+# if로 반복문 사용
+for i in range(1, 101):
+    # i가 증가하면서 짝수, 동시에 7의 배수가 아닌 값
+    if (i % 2 == 0) and (i % 7 != 0):
+        count += 1
+print("1부터 100까지의 수 중에서 짝수이면서 7의 배수가 아닌 수의 개수는 "+str(count) + "개 입니다")
