@@ -1,12 +1,9 @@
-n = int(input("정수를 입력하세요 : "))
+print("7개의 수를 입력받고 그 수들의 평균을 구하는 프로그램을 작성해보세요.")
 
+lst = []
 
-def getSum(n):
-    a = 0
-    for i in range(n+1):    # 0부터 n까지 나열
-        a += i  # i 만큼 a에 더해진다    ex)a +=1  1만큼 더해진다
-    return a				# a 값을 내보내는 함수
+for i in range(7):
+    lst.append(int(input("정수를 입력하세요 :")))
 
-
-result = getSum(n)  # result = a
-print(result)
+average = sum(lst)/len(lst)
+print("평균 :", average)
