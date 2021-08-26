@@ -1,4 +1,3 @@
-# 오늘의 문제 : 계산기 클래스 만들기
 class Calculator:
     def __init__(self, first, second):
         self.first = first
@@ -8,7 +7,7 @@ class Calculator:
         result = self.first+self.second
         return result
 
-    def minus(self):
+    def sub(self):
         result = self.first-self.second
         return result
 
@@ -16,13 +15,29 @@ class Calculator:
         result = self.first*self.second
         return result
 
-    def div(self):
+    def dev(self):
         result = self.first/self.second
         return result
 
 
-a = float(input("첫 번째 숫자를 입력해주세요 : "))
-b = float(input("두 번째 숫자를 입력해주세요 : "))
-cal = Calculator(a, b)
-print("덧셈 : ", cal.add(), "뺄셈 : ", cal.minus())
-print("곱셈 : ", cal.mul(), "나눗셈 : ", cal.div())
+class PerfectCal(Calculator):
+    def modulo(self):
+        result = self.first % self.second
+        return result
+
+    def devide_int(self):
+        result = self.first//self.second
+        return result
+
+
+a = float(input("숫자를 입력하시오.: "))
+b = float(input("숫자를 입력하시오,: "))
+
+n = PerfectCal(a, b)
+print("덧셈결과: " + str(n.add()))
+print("뺄셈결과: " + str(n.sub()))
+print("곱셈결과: " + str(n.mul()))
+print("나눗셈결과: " + str(n.dev()))
+
+print("나눗셈 결과(정수): ", {n.devide_int()}, "입니다.")
+print("나머지: ", {n.modulo()}, "입니다.")
